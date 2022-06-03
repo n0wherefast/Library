@@ -17,14 +17,6 @@ dMode.addEventListener('change',()=>{
   darkMode();
 })
 
-/*const theBook = new book('kenobi','G.L','400','Read!');
-
-  console.log(theBook);
-  myLibrary.push(theBook);
-  console.log(myLibrary)*/
-
-
-
 
 function book(title,author,pages,read){
     this.title = title;
@@ -32,17 +24,6 @@ function book(title,author,pages,read){
     this.pages = pages;
     this.read = read;
 }
-
-  
-
-
-/*
-const p = document.createElement('div');
-body.appendChild(p);
-p.classList.add('pp');
-p.textContent = `Title: ${theBook.title},Author:${theBook.author},${theBook.pages},${theBook.read}`
-*/
-
 
 formB.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -153,9 +134,6 @@ function deleteAll(){
 
 
 }
-
-
-
 
 
 
