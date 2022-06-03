@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo"></a>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+        <div class="title"><h1>Library</h1></div>   
+        
+       <div class="dm">
+           <p>DarkMode</p>
+           <label class="switch">
+            <input class="darkMode" type="checkbox">
+             <span class="slider round"></span>
+          </label> </div>
+        
+
+          
+
+        <ul class="menu">
+            <li><button class="add">+</button>
+                <div class="tab"  id="popUp">
+            <form id="form" class="form-container">
+              <h1>Add New book</h1>
+              <button type="button" class="btn cancel" onclick="closeAddList()">X</button>
+          
+             <label for="Title"><b>Title</b></label>
+              <input  type="text" class="inputTi" placeholder="Insert Title" >
+
+             <label for="Author"><b>Author</b></label>
+             <input  type="text" class="inputAu" placeholder="Insert Author" >
+
+             <label for="Year"><b>Year</b></label>
+             <input  type="number" class="inputYa" placeholder="Year" >
+           
+              <label for="Pages"><b>Pages</b></label>
+              <input  type="number" class="inputPa" placeholder="Insert Pages" >
+
+              <label for="Read"><b>Read</b></label>
+              <input type="checkbox" class="inputRe">
+               
+          
+              <button type="submit" class="btn" >Add</button>
+              
+            </form>
+
+          </div>
+        </li>
+            <li><button class="remove">-</button>
+                <div class="remList">
+                    <div class="remHead"><h1>Remove book</h1>
+                    <button type="button" class="btn cancel" onclick="closeRemList()">X</button></div>
+                    
+                </div>
+                
+            </li>
+        </ul>
+        
+         
+    </header>
+
+    <div class="container">
+
+       
+
+         
+    </div>
+    <script src="app.js"> </script>
+</body>
+</html>

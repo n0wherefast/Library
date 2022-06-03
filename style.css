@@ -1,0 +1,468 @@
+body{
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont,
+     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+      'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:aliceblue;
+}
+button{
+    border: none;
+    background: none;
+    color: grey;
+    font-size: 40px;
+    width: 400px;
+}
+.header{
+    background-color: #212121;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+   
+}
+.header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #212121;
+}
+.header ul button{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.add:hover{
+    color:rgb(0, 255, 115) ;
+    transition:0.5s;
+}
+.remove:hover{
+    color:rgb(255, 0, 0) ;
+    transition:0.5s;
+}
+
+.header .logo{
+    float: left;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    background-image: url(item/NoWhereFast.jpg);
+    background-position: center;
+    background-size: 75px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+.header .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-in-out;
+}
+.header .menu-icon{
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor:pointer;
+}
+.header .menu-icon .nav-icon{
+    background-color: grey;
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+}
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after{
+    background-color: grey;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+}
+
+
+.header .menu-icon .nav-icon::before{
+    top: 5px;
+}
+.header .menu-icon .nav-icon::after{
+    top: -5px;
+}
+.header .menu-btn{
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu { 
+    max-height:none;
+    
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+
+}.header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45deg);
+    top:0;
+   
+    
+}.header .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    
+    transform: rotate(45deg);
+    top:0;
+} 
+
+
+
+
+
+
+@media (min-width: 48em) {
+
+    .header li{
+        float: left;
+    }
+    .header li button{
+        padding: 20px 30px;
+    }
+    .header .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon{
+        display: none;
+    }
+   
+   .title{
+    display: inline-flex;
+    align-items: center;
+    gap: 100px;
+    font-family:'Courier New', Courier, monospace;
+    margin: 10px 50px;
+    color:rgb(163, 163, 163);
+}
+.remList .cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: rgb(78, 75, 75);
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    margin:10px;
+    width: 10px;
+    height:10px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color:transparent;
+    color: rgb(78, 75, 75);
+    width: 10px;
+    height: 10px;
+    font-size: 25px;
+    position: relative;
+    bottom: 60px !important;
+    left: 250px;
+  }
+
+  .book{
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction:column  ;
+    align-items:flex-start;
+    justify-content:flex-start;
+    background-color: rgb(153, 145, 144);
+    border-radius: 1%;
+    position: relative;
+    top:-50px !important;
+    margin: 30px;
+    
+}
+
+.trash-btn .fa-solid{
+    padding-right: 20px;
+}
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+}
+b{
+    color:#a5a1a1;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=number] {
+  width: 100%;
+  height: 10px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+/*
+ When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus
+.form-container input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  opacity: 0.8;
+  margin:10px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color:transparent;
+  color: rgb(78, 75, 75);
+  width: 10px;
+  height: 10px;
+  font-size: 25px;
+  position: relative;
+  bottom: 48px;
+  left: 250px;
+}
+.form-container .cancel:hover {
+    background-color:transparent;
+    color: rgb(3, 102, 250);
+
+  }
+
+
+  
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.tab{
+    display:none;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 550px;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    margin: 5px;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    position:fixed;
+    width: 100%;
+    height:100% ;
+}
+.book{
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    background-color: rgb(153, 145, 144);
+    border-radius: 1%;
+    top: 133px;
+    left: 47px;
+    position: relative;
+    margin: 30px;
+    
+}
+.eUl{
+    display: flex;
+    flex-direction: column;
+    padding:0px;
+    margin: 0px;
+    width: 100%;
+    
+}
+.eLi{
+    display: flex;
+    list-style: none;
+    margin:10px ;
+    padding: 3px;
+    font-size: 25px;
+
+}
+.h1B{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #3c4d46;
+    margin: 0px 0px 25px;
+    padding: 0px 0px 25px
+}
+.h1B p {
+    padding-top: 10px;
+    margin: 0px;
+    color: #ddd;
+}
+
+
+
+.remList{
+    display:none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 400px;
+    height: 550px;
+    color: #f1f1f1;
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    margin: 5px;
+}
+.remHead{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    gap:50px;
+}
+.remList .cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: rgb(78, 75, 75);
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    margin:30px;
+    width: 10px;
+    height:10px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .remList .cancel:hover{
+    color: rgb(3, 102, 250); 
+      transition: 1ms;
+  }
+  .trash-btn{
+      color: rgb(192, 44, 17); 
+      cursor: pointer;
+      margin-right: 10px;
+      display: flex;
+      justify-content: flex-end;
+  }
+
+.trash-btn:hover{
+    color: rgb(255, 72, 0); 
+    transition:0.2s;
+}
+.trash-btn .fa-solid{
+    padding-right: 20px;
+}
+h1{
+ color: #3c4d46;
+}
+.eLi .trash-btn{
+    cursor: pointer;
+}
+li .remLi{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 30px;
+    font-size: 18px;
+
+}
+li p{
+    color: #04AA6D;
+}
+.dm{
+    width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #5e5e5e;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/*SWITCH BUTTON STYLE*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 22px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:#3c4d46;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*SWITCH BUTTON STILE*/
