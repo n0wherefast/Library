@@ -162,6 +162,9 @@ button{
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color:transparent;
     color: rgb(78, 75, 75);
     width: 10px;
@@ -173,7 +176,6 @@ button{
   }
 
   .book{
-    height: 400px;
     width: 250px;
     display: flex;
     flex-direction:column  ;
@@ -184,6 +186,7 @@ button{
     position: relative;
     top:-50px !important;
     margin: 30px;
+    padding: 10px;
     
 }
 
@@ -200,7 +203,7 @@ button{
     border-radius: 5px;
     margin: 5px;
 }
-.form-container .btn  {
+.form-container .submit  {
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -246,7 +249,7 @@ b{
 }
 
 /* Set a style for the submit/login button */
-.form-container .btn {
+.form-container .submit {
   display: flex;
   justify-content: center;
   align-items: center;    
