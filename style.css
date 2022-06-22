@@ -22,6 +22,7 @@ button{
     position: fixed;
     width: 100%;
     z-index: 1;
+    overflow-y: scroll;
    
 }
 .header ul{
@@ -60,6 +61,7 @@ button{
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-in-out;
+    overflow-y: scroll;
 }
 .header .menu-icon{
     padding: 28px 20px;
@@ -239,6 +241,7 @@ b{
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
+  overflow-y: scroll;
 }
 /*
  When the inputs get focus, do something */
@@ -274,8 +277,9 @@ b{
   height: 10px;
   font-size: 25px;
   position: relative;
-  bottom: 48px;
+  bottom: 60px;
   left: 310px;
+  
 }
 .form-container .cancel:hover {
     background-color:transparent;
