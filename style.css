@@ -7,6 +7,7 @@ body{
      'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
       'Open Sans', 'Helvetica Neue', sans-serif;
     background-color:aliceblue;
+    overflow:hidden;
     
 }
 button{
@@ -22,7 +23,7 @@ button{
     position: fixed;
     width: 100%;
     z-index: 1;
-    overflow-y: scroll;
+    overflow: hidden;
    
 }
 .header ul{
@@ -61,7 +62,7 @@ button{
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-in-out;
-    overflow-y: scroll;
+    
 }
 .header .menu-icon{
     padding: 28px 20px;
